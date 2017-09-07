@@ -28,7 +28,7 @@ $(document).ready(function(){
     $('#fullpage').fullpage({
         // verticalCentered: false,
         // fixedElements: '#pos-header',
-        anchors: ['','story', 'secret', 'register'],
+        anchors: ['','story', 'secret','feeling', 'discover', 'register'],
         menu: '#menu-sum',
         navigation: true,
         navigationPosition: 'left',
@@ -180,94 +180,52 @@ $(document).ready(function(){
     });
 
 
-    // $('.your-class').slick({
-    //     centerMode: true,
-    //     centerPadding: '0px',
-    //     slidesToShow: 5,
-    //     draggable: false,
-    //     responsive: [
-    //     {
-    //         breakpoint: 768,
-    //         settings: {
-    //             arrows: false,
-    //             centerMode: true,
-    //             centerPadding: '40px',
-    //             slidesToShow: 3
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 480,
-    //         settings: {
-    //             arrows: false,
-    //             centerMode: true,
-    //             centerPadding: '40px',
-    //             slidesToShow: 1
-    //         }
-    //     }
-    //     ]
-    // });
+    
 
-    // $('.your-class').on('reInit', function(event, slick, currentSlide, nextSlide){
-    //     console.log(123)
-    //     // $("[data-slick-index="+ (currentSlide-1) +"]").addClass('small');
-    //     // $("[data-slick-index="+ currentSlide +"]").removeClass('big small').addClass('middle');
-    //     $("[data-slick-index="+ nextSlide +"]").addClass('big');
-    //     // $("[data-slick-index="+ (nextSlide+1) +"]").addClass('middle');
-    // });
+    $('#slick-discover').on('init', function(event, slick, currentSlide, nextSlide){
+        // $('.slick-slide').addClass('small')
+        // currentSlide = 0;
+        // nextSlide = 1;
+        // console.log(currentSlide)
+        // $("[data-slick-index="+ (currentSlide-2) +"]").addClass('small').removeClass('big middle');
+        // $("[data-slick-index="+ (currentSlide-1) +"]").addClass('middle').removeClass('big small');
+        // $("[data-slick-index="+ (currentSlide) +"]").addClass('big').removeClass('middle small');
+        // $("[data-slick-index="+ (nextSlide) +"]").addClass('middle').removeClass('big small');
+        // $("[data-slick-index="+ (nextSlide+1) +"]").addClass('small').removeClass('big middle');
+    });
 
-    // // On before slide change
-    // $('.your-class').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    //     $("[data-slick-index="+ (currentSlide-1) +"]").addClass('small');
-    //     $("[data-slick-index="+ currentSlide +"]").removeClass('big small').addClass('middle');
-    //     $("[data-slick-index="+ nextSlide +"]").addClass('big');
-    //     $("[data-slick-index="+ (nextSlide+1) +"]").addClass('middle');
-    // });
+    $('#slick-discover').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        centerMode: true,
+        centerPadding: '15px',
+        slidesToShow: 5,
+        draggable: false,
+        prevArrow: '<span type="button" class="slick-prev"><img src="images/prev_slide.png" alt=""></span>',
+        nextArrow: '<span type="button" class="slick-next"><img src="images/next_slide.png" alt=""></span>'
+    });
 
+    // On before slide change
+    // Trước khi thay đổi . Bắt đầu là 0;
+    $('#slick-discover').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        // $('.slick-slide').addClass('small');
+        // // console.log(currentSlide);
+        // // console.log(nextSlide);
+        // var currentElt = slick.$slides.get(nextSlide);
+        // console.log(currentElt)
+        // $(currentElt).addClass('big').removeClass('middle small');
+        // // $(currentElt).addClass('12123123131233');
+        // var prevElt = $(currentElt).prev();
+        // var prevElt_ofPrev = $(prevElt).prev();
 
+        // var nextElt = $(currentElt).next();
+        // var nextElt_ofNext = $(nextElt).next();
 
+        // prevElt.addClass('middle').removeClass('big small');
+        // prevElt_ofPrev.addClass('small').removeClass('big middle');
 
-
-
-
-
-
-
-    // $('.owl-carousel').on('initialized.owl.carousel', function(e){
-    //     idx = e.item.index;
-    //     $('.owl-item.big').removeClass('big');
-    //     $('.owl-item.medium').removeClass('medium');
-    //     $('.owl-item.small').removeClass('small');
-    //     $('.owl-item').addClass('small');
-        
-
-    //     $('.owl-item').eq(idx+2).addClass('big');
-    //     $('.owl-item').eq(idx+1).addClass('medium');
-    //     // $('.owl-item').eq(idx).addClass('small');
-    //     $('.owl-item').eq(idx+3).addClass('medium');
-    //     $('.owl-item').eq(idx+4).addClass('small');
-    //     $('.owl-item').eq(idx+5).addClass('small');
-    // });
-
-    // $('.owl-carousel').owlCarousel({
-    //     center: false,
-    //     loop: true,
-    //     nav: true,
-    //     items: 5
-    // });
-    // $('.owl-carousel').on('translate.owl.carousel', function(e){
-    //     idx = e.item.index;
-
-    //     // $('.owl-item.big').removeClass('big');
-    //     // $('.owl-item.medium').removeClass('medium');
-    //     // $('.owl-item.small').removeClass('small');
-
-    //     $('.owl-item').addClass('small');
-        
-    //     $('.owl-item').eq(idx+2).addClass('big');
-    //     $('.owl-item').eq(idx+1).addClass('medium');
-    //     // $('.owl-item').eq(idx).addClass('small');
-    //     $('.owl-item').eq(idx+3).addClass('medium');
-    //     $('.owl-item').eq(idx+4).addClass('small');
-    //     $('.owl-item').eq(idx+5).addClass('small');
-    // });
+        // nextElt.addClass('middle').removeClass('big small');
+        // nextElt_ofNext.addClass('small').removeClass('big middle');
+    });
 });

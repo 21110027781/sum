@@ -7,6 +7,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <title>Home</title>
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="js/plugins/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/reset_set_me.css" />
     <link rel="stylesheet" href="js/plugins/fullPage/jquery.fullPage.css" />
     <link rel="stylesheet" href="js/plugins/videojs/video-js.min.css">
@@ -56,16 +57,7 @@
                     </ul>
                 </div>
             </div>
-            <!-- <div class="your-class s-center" style="width: 70%; margin: 0 auto;">
-                <div><img class="img-cos img-responsive" src="images/cosmetic_1.png" alt=""></div>
-                <div><img class="img-cos img-responsive" src="images/cosmetic_2.png" alt=""></div>
-                <div><img class="img-cos img-responsive" src="images/cosmetic_3.png" alt=""></div>
-                <div><img class="img-cos img-responsive" src="images/cosmetic_4.png" alt=""></div>
-                <div><img class="img-cos img-responsive" src="images/cosmetic_5.png" alt=""></div>
-                <div><img class="img-cos img-responsive" src="images/cosmetic_6.png" alt=""></div>
-                <div><img class="img-cos img-responsive" src="images/cosmetic_7.png" alt=""></div>
-                <div><img class="img-cos img-responsive" src="images/cosmetic_9.png" alt=""></div>
-            </div> -->
+            
             <!-- <div style="width: 70%; margin: 0 auto;">
                 <div class="owl-carousel owl-centered">
                     <div><img class="img-cos img-responsive" src="images/cosmetic_1.png" alt=""></div>
@@ -180,7 +172,40 @@
             </div>
         </div>
         <div id="section-5" class="section fp-auto-height-responsive">
-            <img class="img-responsive" src="images/pri_background_5.jpg" />
+            <div class="s-container">
+                <div class="title-5">
+                    <img class="img-sct-5 img-responsive" src="images/section_5.png" alt="">
+                </div>
+                <div class="wrap-slide-5">
+                    <div id="slick-discover">
+                        <div>
+                            <div data-toggle="modal" data-target="#modalDetaialProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_1.png" alt=""></div>
+                            <span class="name-product">Lorem Inpusin</span>
+                        </div>
+                        <div>
+                            <div data-toggle="modal" data-target="#modalDetaialProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_2.png" alt=""></div>
+                            <span class="name-product">Lorem Inpusin</span>
+                        </div>
+                        <div>
+                            <div data-toggle="modal" data-target="#modalDetaialProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_3.png" alt=""></div>
+                            <span class="name-product">Lorem Inpusin</span>
+                        </div>
+                        <div>
+                            <div data-toggle="modal" data-target="#modalDetaialProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_4.png" alt=""></div>
+                            <span class="name-product">Lorem Inpusin</span>
+                        </div>
+                        <div>
+                            <div data-toggle="modal" data-target="#modalDetaialProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_1.png" alt=""></div>
+                            <span class="name-product">Lorem Inpusin</span>
+                        </div>
+                        <div>
+                            <div data-toggle="modal" data-target="#modalDetaialProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_5.png" alt=""></div>
+                            <span class="name-product">Lorem Inpusin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <img class="img-responsive" src="images/pri_background_5.jpg" /> -->
         </div>
         <div id="section-6" class="section fp-auto-height-responsive">
             <div class="content-on-footer">
@@ -265,12 +290,47 @@
         <img id="loading-image" src="images/logo.png" alt="logo" />
         <div class="loader">Loading...</div>
     </div>
-    
+    <div class="modal fade" id="modalDetaialProd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog model-md-sum modal-detail-prod" role="document">
+            <div class="modal-content">
+                <span class="close-model" data-dismiss="modal" aria-label="Close">
+                    <img class="img-responsive" src="images/ic-close-modal.png" alt="" />
+                </span>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button> -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <img class="img-responsive" src="images/product-modal.png">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="contain-right-modal">
+                                <span class="name">Sercet Essence</span>
+                                <div class="des">
+                                <p>Secret Essence - dòng sản phẩm chứa đựng bí mật của mỹ học lên men, là bí quyết cho làn da căng mượt, trẻ trung từ sâu bên trong.</p>
+                                <p>Được kết tinh từ hơn 80 loại thảo mộc tinh túy và trải qua quá trình lên men ròng rã suốt 2 năm, Secret Essence đem lại phép màu diệu kỳ cho làn da, giúp da tươi sáng, ấm min và trong trẻo.</p>
+                                </div>
+                                <div class="product-int">
+                                    <span class="title">SẢN PHẨM TIÊU BIỂU</span>
+                                    <ul>
+                                        <li>
+                                            <img style="width: 40px" class="img-responsive" src="images/stc_5_4_test.png">
+                                            <span>Sercet Essence</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- end footer page -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins/videojs/video.min.js"></script>
+    <script src="js/plugins/bootstrap/js/bootstrap.min.js"></script>
     
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
     <!-- <script src="js/plugins/vendors/jquery.easings.min.js"></script> -->
