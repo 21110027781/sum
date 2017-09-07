@@ -331,7 +331,10 @@ body{
 #section-4 .slick-dots li button:before{
 	color: #999;
 	opacity: 0;
-	font-size: 10px;
+	font-size: 11px;
+    width: 18px;
+    height: 18px;
+    left: 1px;
 }
 #section-4 .slick-dots li.slick-active button:before{
 	color: #999;
