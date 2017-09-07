@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     var options = {
         aspectRatio: '16:9',
-        fluid: true,
+        // fluid: true,
         controlBar: {
             fullscreenToggle: false
         }
@@ -41,8 +41,8 @@ $(document).ready(function(){
             }
             if(nextIndex != 2){
                 clearTimeout(toutAutoSection2);
-                //elemVideoAuto2.get(0).pause();
-                // elemVideoAuto2.get(0).currentTime = 0;
+                elemVideoAuto2.get(0).pause();
+                elemVideoAuto2.get(0).currentTime = 0;
             }else{
                 $('.br-section-2').fadeIn();
                 $('.col-right-section-2').removeClass('opaque');
@@ -68,18 +68,18 @@ $(document).ready(function(){
                     $('.br-section-2').fadeOut();
                     $('.col-right-section-2').addClass('opaque');
                     $('#play-section-2').fadeOut();
-                    // elemVideoAuto2.get(0).play();
-                    var player = videojs('video-section-2-auto', options, function () {
-                        videojs.log('Your player is ready!');
+                    elemVideoAuto2.get(0).play();
+                    // var player = videojs('video-section-2-auto', options, function () {
+                    //     videojs.log('Your player is ready!');
 
-                        // In this context, `this` is the player that was created by Video.js.
-                        this.play();
+                    //     // In this context, `this` is the player that was created by Video.js.
+                    //     this.play();
 
-                        // How about an event listener?
-                        this.on('ended', function() {
-                            videojs.log('Ended !');
-                        });
-                    });
+                    //     // How about an event listener?
+                    //     this.on('ended', function() {
+                    //         videojs.log('Ended !');
+                    //     });
+                    // });
                     $('#video-section-2-auto').fadeIn();
                 }, 2500);
             }else{
@@ -125,8 +125,8 @@ $(document).ready(function(){
         elemVideoClick2.fadeIn();
         clearTimeout(toutAutoSection2);
         elemVideoAuto2.fadeOut();
-        // elemVideoAuto2.get(0).pause();
-        // elemVideoAuto2.get(0).currentTime = 0;
+        elemVideoAuto2.get(0).pause();
+        elemVideoAuto2.get(0).currentTime = 0;
 
         if ($("#video-section-2-click").get(0).paused) {
             $("#video-section-2-click").get(0).play();
@@ -166,6 +166,19 @@ $(document).ready(function(){
             $("#video-section-3-click").get(0).pause();
         }
     });
+
+
+    $('#slide-section-4').slick({
+        slidesToShow: 3,
+        swipeToSlide: true,
+        dots: true,
+        prevArrow: '<span type="button" class="slick-prev"><img src="images/prev_slide.png" alt=""></span>',
+        nextArrow: '<span type="button" class="slick-next"><img src="images/next_slide.png" alt=""></span>',
+        // slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+    });
+
 
     // $('.your-class').slick({
     //     centerMode: true,
