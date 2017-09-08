@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Flash message for AngularJS</title>
+	<link rel="stylesheet" type="text/css" href="dist/assets/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="dist/assets/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="docs.theme.min.css">
+	<style type="text/css">
+		#demos .owl-carousel .item{
+			transition: all 0.5s;
+		}
+		#demos .owl-carousel .owl-item .item{
+			transform: scale(0.6) translateY(50%);
+		}
+		#demos .owl-carousel .owl-item.middle .item{
+			transform: scale(0.8) translateY(20%);
+		}
+		#demos .owl-carousel .owl-item.center .item{
+			transform: scale(1);
+		}
+	</style>
+</head>
+	
+<body>
+	<section id="demos">
+  		<div class="row">
+        	<div class="large-12 columns">
+      			<h4 id="center-with-loop">Center with loop</h4>
+				<div class="loop owl-carousel owl-theme">
+				    <div class="item">
+				      <h4>1</h4>
+				    </div>
+				    <div class="item">
+				      <h4>2</h4>
+				    </div>
+				    <div class="item">
+				      <h4>3</h4>
+				    </div>
+				    <div class="item">
+				      <h4>4</h4>
+				    </div>
+				    <div class="item">
+				      <h4>5</h4>
+				    </div>
+				    <div class="item">
+				      <h4>6</h4>
+				    </div>
+				    <div class="item">
+				      <h4>7</h4>
+				    </div>
+				    <div class="item">
+				      <h4>8</h4>
+				    </div>
+				    <div class="item">
+				      <h4>9</h4>
+				    </div>
+				    <div class="item">
+				      <h4>10</h4>
+				    </div>
+				    <div class="item">
+				      <h4>11</h4>
+				    </div>
+				    <div class="item">
+				      <h4>12</h4>
+				    </div>
+		  		</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script src="dist/owl.carousel.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var owl = $('.loop');
+			owl.on('changed.owl.carousel', function(e){
+				console.log(e.item)
+				idx = e.item.index;
+		        $('.owl-item.big').removeClass('big');
+		        $('.owl-item.middle').removeClass('middle');
+		        $('.owl-item').eq(idx).addClass('big');
+		        $('.owl-item').eq(idx-1).addClass('middle');
+		        $('.owl-item').eq(idx+1).addClass('middle');
+			});
+			owl.owlCarousel({
+			    center: true,
+			    items: 3,
+			    loop:true,
+			    margin:10,
+			    nav: true,
+			    responsive:{
+			        600:{
+			            items:5
+			        }
+			    }
+			});
+		})
+	</script>
+</body>
+</html>
