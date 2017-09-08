@@ -8,17 +8,30 @@ $(window).on('load', function () {
 $(document).ready(function(){
 
     var options = {
-        aspectRatio: '16:9',
-        // fluid: true,
+        // aspectRatio: '16:9',
+        fluid: true,
+        controls: true,
+        loop: false,
         controlBar: {
             fullscreenToggle: false
         }
     };
 
     
+    var autoPlayVideo_2 = videojs('video-section-2-auto', options, function () {});
+    var clickPlayVideo_2 = videojs('video-section-2-click', options, function () {});
+    var autoPlayVideo_3 = videojs('video-section-3-auto', options, function () {});
+    var clickPlayVideo_3 = videojs('video-section-3-click', options, function () {});
 
+    function hideElemWhenAutoPlayVideo(){
+        $('footer').fadeOut();
+        $('#fp-nav').fadeOut();
+    }
 
-
+    function showElemAfterAutoPlayVideo(){
+        $('footer').fadeIn();
+        $('#fp-nav').fadeIn();
+    }
 
     var toutAutoSection2, toutAutoSection3;
     var elemVideoAuto2 = $('#video-section-2-auto');
@@ -41,25 +54,25 @@ $(document).ready(function(){
             }
             if(nextIndex != 2){
                 clearTimeout(toutAutoSection2);
-                elemVideoAuto2.get(0).pause();
-                elemVideoAuto2.get(0).currentTime = 0;
+                autoPlayVideo_2.pause();
+                autoPlayVideo_2.currentTime(0);
             }else{
                 $('.br-section-2').fadeIn();
                 $('.col-right-section-2').removeClass('opaque');
                 elemVideoClick2.fadeOut();
-                elemVideoClick2.get(0).pause();
-                elemVideoClick2.get(0).currentTime = 0;
+                clickPlayVideo_2.pause();
+                clickPlayVideo_2.currentTime(0);
             }
             if(nextIndex != 3){
                 clearTimeout(toutAutoSection3);
-                elemVideoAuto3.get(0).pause();
-                elemVideoAuto3.get(0).currentTime = 0;
+                autoPlayVideo_3.pause();
+                autoPlayVideo_3.currentTime(0);
             }else{
                 $('.br-section-3').fadeIn();
                 $('.col-left-section-3').removeClass('opaque');
                 elemVideoClick3.fadeOut();
-                elemVideoClick3.get(0).pause();
-                elemVideoClick3.get(0).currentTime = 0;
+                clickPlayVideo_3.pause();
+                clickPlayVideo_3.currentTime(0);
             }
         },
         afterLoad: function(anchorLink, index){
@@ -68,22 +81,14 @@ $(document).ready(function(){
                     $('.br-section-2').fadeOut();
                     $('.col-right-section-2').addClass('opaque');
                     $('#play-section-2').fadeOut();
-                    elemVideoAuto2.get(0).play();
-                    // var player = videojs('video-section-2-auto', options, function () {
-                    //     videojs.log('Your player is ready!');
-
-                    //     // In this context, `this` is the player that was created by Video.js.
-                    //     this.play();
-
-                    //     // How about an event listener?
-                    //     this.on('ended', function() {
-                    //         videojs.log('Ended !');
-                    //     });
-                    // });
+                    hideElemWhenAutoPlayVideo();
+                    autoPlayVideo_2.play();
                     $('#video-section-2-auto').fadeIn();
                 }, 2500);
             }else{
                 elemVideoAuto2.fadeOut();
+                autoPlayVideo_2.pause();
+                autoPlayVideo_2.currentTime(0);
                 $('#play-section-2').fadeIn();
             }
 
@@ -92,79 +97,85 @@ $(document).ready(function(){
                     $('.br-section-3').fadeOut();
                     $('.col-left-section-3').addClass('opaque');
                     $('#play-section-3').fadeOut();
-                    elemVideoAuto3.get(0).play();
+                    hideElemWhenAutoPlayVideo();
+                    autoPlayVideo_3.play();
                     elemVideoAuto3.fadeIn();
                 }, 2500);
             }else{
                 elemVideoAuto3.fadeOut();
+                autoPlayVideo_3.pause();
+                autoPlayVideo_3.currentTime(0);
+                $('#play-section-3').fadeIn();
             }
         },
         afterRender: function(anchorLink, index, slideAnchor, slideIndex){
         }
     });
-    document.getElementById('video-section-2-auto').addEventListener('ended',checkAutoVideo2,false);
-    function checkAutoVideo2(e) {
+
+    autoPlayVideo_2.on('ended', function() {
+        showElemAfterAutoPlayVideo();
         $('.br-section-2').fadeIn();
         $('.col-right-section-2').removeClass('opaque');
         $('#play-section-2').fadeIn();
         elemVideoAuto2.fadeOut();
-    }
+        autoPlayVideo_2.pause();
+        autoPlayVideo_2.currentTime(0);
+    });
 
-    document.getElementById('video-section-2-click').addEventListener('ended',checkLongVideo2,false);
-    function checkLongVideo2(e) {
+    clickPlayVideo_2.on('ended', function() {
+        showElemAfterAutoPlayVideo();
         $('.br-section-2').fadeIn(300);
         $('.col-right-section-2').removeClass('opaque');
         $('#play-section-2').fadeIn();
         elemVideoClick2.fadeOut();
-    }
+        clickPlayVideo_2.pause();
+        clickPlayVideo_2.currentTime(0);
+    });
 
     $('#play-section-2').click(function () {
+        hideElemWhenAutoPlayVideo();
         $('#play-section-2').fadeOut();
         $('.br-section-2').fadeOut();
         $('.col-right-section-2').addClass('opaque');
         elemVideoClick2.fadeIn();
+        clickPlayVideo_2.play();
         clearTimeout(toutAutoSection2);
         elemVideoAuto2.fadeOut();
-        elemVideoAuto2.get(0).pause();
-        elemVideoAuto2.get(0).currentTime = 0;
-
-        if ($("#video-section-2-click").get(0).paused) {
-            $("#video-section-2-click").get(0).play();
-        } else {
-            $("#video-section-2-click").get(0).pause();
-        }
+        autoPlayVideo_2.pause();
+        autoPlayVideo_2.currentTime(0);
     });
-    
-    document.getElementById('video-section-3-auto').addEventListener('ended',checkAutoVideo3,false);
-    function checkAutoVideo3(e) {
+
+    autoPlayVideo_3.on('ended', function() {
+        showElemAfterAutoPlayVideo();
         $('.br-section-3').fadeIn(300);
         $('.col-left-section-3').removeClass('opaque');
         $('#play-section-3').fadeIn(300);
         elemVideoAuto3.fadeOut();
-    }
+        autoPlayVideo_3.pause();
+        autoPlayVideo_3.currentTime(0);
+    });
 
-    document.getElementById('video-section-3-click').addEventListener('ended',checkLongVideo3,false);
-    function checkLongVideo3(e) {
+    clickPlayVideo_3.on('ended', function() {
+        showElemAfterAutoPlayVideo();
         $('.br-section-3').fadeIn(300);
         $('.col-left-section-3').removeClass('opaque');
         $('#play-section-3').fadeIn(300);
         elemVideoClick3.fadeOut();
-    }
+        clickPlayVideo_3.pause();
+        clickPlayVideo_3.currentTime(0);
+    });
 
     $('#play-section-3').click(function () {
+        hideElemWhenAutoPlayVideo();
         $('.br-section-3').fadeOut();
         $('#play-section-3').fadeOut();
         $('.col-left-section-3').addClass('opaque');
         elemVideoClick3.fadeIn();
+        clickPlayVideo_3.play(0);
         clearTimeout(toutAutoSection3);
         elemVideoAuto3.fadeOut();
-        elemVideoAuto3.get(0).pause();
-        elemVideoAuto3.get(0).currentTime = 0;
-        if ($("#video-section-3-click").get(0).paused) {
-            $("#video-section-3-click").get(0).play();
-        } else {
-            $("#video-section-3-click").get(0).pause();
-        }
+        autoPlayVideo_3.pause();
+        autoPlayVideo_3.currentTime(0);
     });
 
 
@@ -174,9 +185,20 @@ $(document).ready(function(){
         dots: true,
         prevArrow: '<span type="button" class="slick-prev"><img src="images/prev_slide.png" alt=""></span>',
         nextArrow: '<span type="button" class="slick-next"><img src="images/next_slide.png" alt=""></span>',
-        // slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        responsive: [{
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
     });
 
 
