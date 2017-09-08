@@ -704,7 +704,15 @@ video::-webkit-media-controls {
 	display: block;
 	margin-bottom: 15px;
 }
-
+.close-video{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 25px;
+	height: 25px;
+	padding: 3px;
+	z-index: 60;
+}
 /*@media (min-width: 1170px){
 	.container {
 	    max-width: 1110px;

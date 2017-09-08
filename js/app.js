@@ -34,10 +34,14 @@ $(document).ready(function(){
     }
 
     var toutAutoSection2, toutAutoSection3;
+
     var elemVideoAuto2 = $('#video-section-2-auto');
     var elemVideoClick2 = $('#video-section-2-click');
+    var btnCloseVideo2 = $('#close-video-2');
+
     var elemVideoAuto3 = $('#video-section-3-auto');
     var elemVideoClick3 = $('#video-section-3-click');
+    var btnCloseVideo3 = $('#close-video-3');
     $('#fullpage').fullpage({
         // verticalCentered: false,
         // fixedElements: '#pos-header',
@@ -60,6 +64,7 @@ $(document).ready(function(){
                 $('.br-section-2').fadeIn();
                 $('.col-right-section-2').removeClass('opaque');
                 elemVideoClick2.fadeOut();
+                btnCloseVideo2.fadeOut();
                 clickPlayVideo_2.pause();
                 clickPlayVideo_2.currentTime(0);
             }
@@ -71,6 +76,7 @@ $(document).ready(function(){
                 $('.br-section-3').fadeIn();
                 $('.col-left-section-3').removeClass('opaque');
                 elemVideoClick3.fadeOut();
+                btnCloseVideo3.fadeOut();
                 clickPlayVideo_3.pause();
                 clickPlayVideo_3.currentTime(0);
             }
@@ -84,9 +90,11 @@ $(document).ready(function(){
                     hideElemWhenAutoPlayVideo();
                     autoPlayVideo_2.play();
                     $('#video-section-2-auto').fadeIn();
+                    btnCloseVideo2.fadeIn();
                 }, 2500);
             }else{
                 elemVideoAuto2.fadeOut();
+                btnCloseVideo2.fadeOut();
                 autoPlayVideo_2.pause();
                 autoPlayVideo_2.currentTime(0);
                 $('#play-section-2').fadeIn();
@@ -100,9 +108,11 @@ $(document).ready(function(){
                     hideElemWhenAutoPlayVideo();
                     autoPlayVideo_3.play();
                     elemVideoAuto3.fadeIn();
+                    btnCloseVideo3.fadeIn();
                 }, 2500);
             }else{
                 elemVideoAuto3.fadeOut();
+                btnCloseVideo3.fadeOut();
                 autoPlayVideo_3.pause();
                 autoPlayVideo_3.currentTime(0);
                 $('#play-section-3').fadeIn();
@@ -118,6 +128,7 @@ $(document).ready(function(){
         $('.col-right-section-2').removeClass('opaque');
         $('#play-section-2').fadeIn();
         elemVideoAuto2.fadeOut();
+        btnCloseVideo2.fadeOut();
         autoPlayVideo_2.pause();
         autoPlayVideo_2.currentTime(0);
     });
@@ -128,11 +139,12 @@ $(document).ready(function(){
         $('.col-right-section-2').removeClass('opaque');
         $('#play-section-2').fadeIn();
         elemVideoClick2.fadeOut();
+        btnCloseVideo2.fadeOut();
         clickPlayVideo_2.pause();
         clickPlayVideo_2.currentTime(0);
     });
-
     $('#play-section-2').click(function () {
+        btnCloseVideo2.fadeIn();
         hideElemWhenAutoPlayVideo();
         $('#play-section-2').fadeOut();
         $('.br-section-2').fadeOut();
@@ -144,6 +156,22 @@ $(document).ready(function(){
         autoPlayVideo_2.pause();
         autoPlayVideo_2.currentTime(0);
     });
+    $('#close-video-2').click(function () {
+        btnCloseVideo2.fadeOut();
+        showElemAfterAutoPlayVideo();
+        $('.br-section-2').fadeIn();
+        $('.col-right-section-2').removeClass('opaque');
+        $('#play-section-2').fadeIn();
+        elemVideoAuto2.fadeOut();
+        autoPlayVideo_2.pause();
+        autoPlayVideo_2.currentTime(0);
+
+        elemVideoClick2.fadeOut();
+        clickPlayVideo_2.pause();
+        clickPlayVideo_2.currentTime(0);
+    });
+
+    /*-------------*/
 
     autoPlayVideo_3.on('ended', function() {
         showElemAfterAutoPlayVideo();
@@ -153,6 +181,8 @@ $(document).ready(function(){
         elemVideoAuto3.fadeOut();
         autoPlayVideo_3.pause();
         autoPlayVideo_3.currentTime(0);
+
+        btnCloseVideo3.fadeOut();
     });
 
     clickPlayVideo_3.on('ended', function() {
@@ -163,6 +193,7 @@ $(document).ready(function(){
         elemVideoClick3.fadeOut();
         clickPlayVideo_3.pause();
         clickPlayVideo_3.currentTime(0);
+        btnCloseVideo3.fadeOut();
     });
 
     $('#play-section-3').click(function () {
@@ -176,6 +207,24 @@ $(document).ready(function(){
         elemVideoAuto3.fadeOut();
         autoPlayVideo_3.pause();
         autoPlayVideo_3.currentTime(0);
+
+        btnCloseVideo3.fadeIn();
+    });
+
+    $('#close-video-3').click(function () {
+        showElemAfterAutoPlayVideo();
+        $('.br-section-3').fadeIn(300);
+        $('.col-left-section-3').removeClass('opaque');
+        $('#play-section-3').fadeIn(300);
+        elemVideoAuto3.fadeOut();
+        autoPlayVideo_3.pause();
+        autoPlayVideo_3.currentTime(0);
+
+        elemVideoClick3.fadeOut();
+        clickPlayVideo_3.pause();
+        clickPlayVideo_3.currentTime(0);
+        
+        btnCloseVideo3.fadeOut();
     });
 
 
