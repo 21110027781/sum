@@ -223,7 +223,7 @@ $(document).ready(function(){
         elemVideoClick3.fadeOut();
         clickPlayVideo_3.pause();
         clickPlayVideo_3.currentTime(0);
-        
+
         btnCloseVideo3.fadeOut();
     });
 
@@ -250,21 +250,6 @@ $(document).ready(function(){
         }]
     });
 
-
-    
-
-    $('#slick-discover').on('init', function(event, slick, currentSlide, nextSlide){
-        // $('.slick-slide').addClass('small')
-        // currentSlide = 0;
-        // nextSlide = 1;
-        // console.log(currentSlide)
-        // $("[data-slick-index="+ (currentSlide-2) +"]").addClass('small').removeClass('big middle');
-        // $("[data-slick-index="+ (currentSlide-1) +"]").addClass('middle').removeClass('big small');
-        // $("[data-slick-index="+ (currentSlide) +"]").addClass('big').removeClass('middle small');
-        // $("[data-slick-index="+ (nextSlide) +"]").addClass('middle').removeClass('big small');
-        // $("[data-slick-index="+ (nextSlide+1) +"]").addClass('small').removeClass('big middle');
-    });
-
     $('#slick-discover').slick({
         dots: true,
         infinite: true,
@@ -277,26 +262,44 @@ $(document).ready(function(){
         nextArrow: '<span type="button" class="slick-next"><img src="images/next_slide.png" alt=""></span>'
     });
 
-    // On before slide change
-    // Trước khi thay đổi . Bắt đầu là 0;
-    $('#slick-discover').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        // $('.slick-slide').addClass('small');
-        // // console.log(currentSlide);
-        // // console.log(nextSlide);
-        // var currentElt = slick.$slides.get(nextSlide);
-        // console.log(currentElt)
-        // $(currentElt).addClass('big').removeClass('middle small');
-        // // $(currentElt).addClass('12123123131233');
-        // var prevElt = $(currentElt).prev();
-        // var prevElt_ofPrev = $(prevElt).prev();
+    var owl = $('.center-mode-owl');
+    owl.on('changed.owl.carousel', function(e){
+        console.log(e.item)
+        idx = e.item.index;
+        $('.owl-item.big').removeClass('big');
+        $('.owl-item.middle').removeClass('middle middle-left middle-right');
+        $('.owl-item.in-right').removeClass('in-right');
+        $('.owl-item.in-left').removeClass('in-left');
 
-        // var nextElt = $(currentElt).next();
-        // var nextElt_ofNext = $(nextElt).next();
-
-        // prevElt.addClass('middle').removeClass('big small');
-        // prevElt_ofPrev.addClass('small').removeClass('big middle');
-
-        // nextElt.addClass('middle').removeClass('big small');
-        // nextElt_ofNext.addClass('small').removeClass('big middle');
+        $('.owl-item').eq(idx).addClass('big');
+        $('.owl-item').eq(idx-1).addClass('middle middle-left');
+        $('.owl-item').eq(idx-2).addClass('in-left');
+        $('.owl-item').eq(idx+1).addClass('middle middle-right');
+        $('.owl-item').eq(idx+2).addClass('in-right');
     });
+    
+    owl.owlCarousel({
+        center: true,
+        items: 3,
+        loop:true,
+        margin: -30,
+        nav: false,
+        responsive:{
+            600:{
+                items:5
+            }
+        }
+    });
+
+    $('.view-detail-price').on('click', function(){
+        var element = $(this).attr('data-id');
+        $(this).parents('.content-des').hide();
+        $('#'+element).show();
+        $('#'+element).parents('.modal-content').find('.back-layer').show();
+    })
+    $('.back-layer').on('click', function(){
+        $(this).hide();
+        $(this).parent().find('.content-des').show();
+        $(this).parent().find('.content-detail').hide();
+    })
 });
