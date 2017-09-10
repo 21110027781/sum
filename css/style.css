@@ -72,6 +72,7 @@ body{
 .section{
 	/*text-align:center;*/
 	overflow: hidden;
+	position: relative;
 }
 .nav-menu{
     -ms-flex-direction: row !important;
@@ -693,10 +694,10 @@ video::-webkit-media-controls {
 	transform: scale(1);
 }
 .des-price-prod .name{
-	font-size: 24px;
-	font-weight: 600;
+	font-size: 30px;
 	display: block;
 	margin-bottom: 15px;
+	font-family: 'VNFNarzissRegular';
 }
 .des-price-prod .price{
 	font-size: 20px;
@@ -820,10 +821,10 @@ video::-webkit-media-controls {
 	}
 }*/
 .contain-right-modal > .name{
-	font-size: 24px;
-	font-weight: 600;
+	font-size: 30px;
 	display: block;
 	margin-bottom: 15px;
+	font-family: 'VNFNarzissRegular';
 }
 .contain-right-modal .des{
 	color: #7f7f7f;
@@ -843,15 +844,16 @@ video::-webkit-media-controls {
 }
 .product-int ul li img{
 	margin: 0 auto;
-	width: 40px;
+	max-height: 55px;
 }
 .product-int ul li span{
 	display: block;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 11px;
 	color: #707070;
-	margin-top: 10px;
+	margin-top: 5px;
+    font-weight: 600;
 }
 .modal-detail-prod .close-model{
 	position: absolute;
@@ -877,12 +879,12 @@ video::-webkit-media-controls {
   vertical-align: middle;
 }
 
-.modal-body .content-detail{
+.modal-body .content-detail, .modal-body .content-des{
 	display: table;
 	table-layout: fixed;
 	width: 100%;
 }
-.content-detail .col-sm-6{
+.content-detail .col-sm-6, .content-des .col-sm-6{
 	display: table-cell;
 	vertical-align: middle;
 	float: none;
