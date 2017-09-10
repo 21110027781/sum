@@ -573,7 +573,7 @@ body{
     bottom: -40px;
 }
 footer{
-	position: absolute;
+	position: fixed;
 	bottom: 0px;
 	left: 0px;
 	width: 100%;

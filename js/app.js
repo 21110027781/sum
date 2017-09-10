@@ -122,6 +122,8 @@ $(document).ready(function(){
         }
     });
 
+    // $.fn.fullpage.destroy('all');
+
     autoPlayVideo_2.on('ended', function() {
         showElemAfterAutoPlayVideo();
         $('.br-section-2').fadeIn();
