@@ -280,26 +280,62 @@ $(document).ready(function(){
     
     owl.owlCarousel({
         center: true,
-        items: 3,
-        loop:true,
+        items: 1,
+        loop: true,
         margin: -30,
         nav: false,
+        // mouseDrag: false,
+        // touchDrag: false,
         responsive:{
             600:{
                 items:5
             }
         }
     });
+    $('.owl-5-next').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    $('.owl-5-prev').click(function() {
+        owl.trigger('prev.owl.carousel');
+    })
+
 
     $('.view-detail-price').on('click', function(){
         var element = $(this).attr('data-id');
         $(this).parents('.content-des').hide();
         $('#'+element).show();
         $('#'+element).parents('.modal-content').find('.back-layer').show();
+        console.log($('#'+element).find('.content-detail'));
     })
+
     $('.back-layer').on('click', function(){
         $(this).hide();
         $(this).parent().find('.content-des').show();
         $(this).parent().find('.content-detail').hide();
+    })
+
+    $('#modalDetailProd_1').on('show.bs.modal', function () {
+        $('#modalDetailProd_1').find('.content-des').show();
+        $('#modalDetailProd_1').find('.content-detail').hide();
+    })
+
+    $('#modalDetailProd_2').on('show.bs.modal', function () {
+        $('#modalDetailProd_2').find('.content-des').show();
+        $('#modalDetailProd_2').find('.content-detail').hide();
+    })
+
+    $('#modalDetailProd_3').on('show.bs.modal', function () {
+        $('#modalDetailProd_3').find('.content-des').show();
+        $('#modalDetailProd_3').find('.content-detail').hide();
+    })
+
+    $('#modalDetailProd_4').on('show.bs.modal', function () {
+        $('#modalDetailProd_4').find('.content-des').show();
+        $('#modalDetailProd_4').find('.content-detail').hide();
+    })
+
+    $('#modalDetailProd_5').on('show.bs.modal', function () {
+        $('#modalDetailProd_5').find('.content-des').show();
+        $('#modalDetailProd_5').find('.content-detail').hide();
     })
 });
