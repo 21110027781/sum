@@ -300,14 +300,20 @@ $(document).ready(function(){
         $('.owl-item').eq(idx-2).addClass('in-left');
         $('.owl-item').eq(idx+1).addClass('middle middle-right');
         $('.owl-item').eq(idx+2).addClass('in-right');
+        $('.center-mode-owl .owl-dots').click(function(event) {
+          $(this).removeClass('disabled');
+        });
     });
-    
+    owl.on('translate.owl.carousel', function(e){
+        $('.center-mode-owl').find('.owl-dots').removeClass('disabled');
+    });
     owl.owlCarousel({
         center: true,
         items: 2,
         loop: true,
         margin: -30,
         nav: false,
+        dots: true,
         // mouseDrag: false,
         // touchDrag: false,
         responsive:{
