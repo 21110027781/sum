@@ -88,6 +88,8 @@
          url('fonts/Cambria.woff') format('woff'),
          url('fonts/Cambria.ttf') format('truetype'),
          url('fonts/Cambria.svg#Cambria') format('svg');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {

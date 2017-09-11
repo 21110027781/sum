@@ -2,7 +2,7 @@ body{
 	font-size: 14px;
 	font-family: 'Cambria', Georgia, serif !important;
 	color: #1c1c1c;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.4128;
     background-color: #FFF;
 }
@@ -874,6 +874,7 @@ video::-webkit-media-controls {
 }
 .contain-right-modal .des{
 	color: #7f7f7f;
+	font-weight: 400;
 }
 .product-int .title{
 	color: #707070;
