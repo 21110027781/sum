@@ -24,6 +24,7 @@ body{
 	bottom: 15px;
 	z-index: 35;
 	width: 25px;
+	display: none;
 }
 .sum-body #fp-nav ul li:hover a span, .sum-body #fp-nav ul li a span{
     background: transparent;

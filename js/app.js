@@ -65,6 +65,11 @@ $(document).ready(function(){
                     $('#pos-header').removeClass('on');
                 }
             }
+            if(nextIndex != 1){
+                $('#backToTop').fadeIn();
+            }else{
+                $('#backToTop').fadeOut();
+            }
             if(nextIndex != 2){
                 clearTimeout(toutAutoSection2);
                 autoPlayVideo_2.pause();
