@@ -1356,6 +1356,17 @@ video::-webkit-media-controls {
 	#section-5 .title-5{
 		max-width: 100%;
 	}
+	.modal-detail-prod .modal-content{
+		padding: 20px;
+	}
+	.modal-body .content-detail, .modal-body .content-des{
+		display: block;
+		margin: 0px !important;
+	}
+	.content-detail .col-sm-6, .content-des .col-sm-6{
+		width: 100%;
+		display: block;
+	}
 }
 @media (max-width: 360px){
 	#section-5 .title-5{
