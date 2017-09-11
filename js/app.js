@@ -52,7 +52,7 @@ $(document).ready(function(){
     $('#fullpage').fullpage({
         // verticalCentered: false,
         // fixedElements: '#pos-header',
-        anchors: ['','story', 'secret','feeling', 'discover', 'register'],
+        anchors: ['magic','story', 'secret','feeling', 'discover', 'register'],
         menu: '#menu-sum',
         navigation: true,
         navigationPosition: 'left',
