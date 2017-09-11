@@ -344,26 +344,31 @@ $(document).ready(function(){
     })
 
     $('#modalDetailProd_1').on('show.bs.modal', function () {
+        $('.back-layer').hide();
         $('#modalDetailProd_1').find('.content-des').show();
         $('#modalDetailProd_1').find('.content-detail').hide();
     })
 
     $('#modalDetailProd_2').on('show.bs.modal', function () {
+        $('.back-layer').hide();
         $('#modalDetailProd_2').find('.content-des').show();
         $('#modalDetailProd_2').find('.content-detail').hide();
     })
 
     $('#modalDetailProd_3').on('show.bs.modal', function () {
+        $('.back-layer').hide();
         $('#modalDetailProd_3').find('.content-des').show();
         $('#modalDetailProd_3').find('.content-detail').hide();
     })
 
     $('#modalDetailProd_4').on('show.bs.modal', function () {
+        $('.back-layer').hide();
         $('#modalDetailProd_4').find('.content-des').show();
         $('#modalDetailProd_4').find('.content-detail').hide();
     })
 
     $('#modalDetailProd_5').on('show.bs.modal', function () {
+        $('.back-layer').hide();
         $('#modalDetailProd_5').find('.content-des').show();
         $('#modalDetailProd_5').find('.content-detail').hide();
     })
