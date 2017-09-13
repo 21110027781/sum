@@ -275,18 +275,6 @@ $(document).ready(function(){
         }]
     });
 
-    $('#slick-discover').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        centerMode: true,
-        centerPadding: '15px',
-        slidesToShow: 5,
-        draggable: false,
-        prevArrow: '<span type="button" class="slick-prev"><img src="images/prev_slide.png" alt=""></span>',
-        nextArrow: '<span type="button" class="slick-next"><img src="images/next_slide.png" alt=""></span>'
-    });
-
     var owl = $('.center-mode-owl');
     owl.on('changed.owl.carousel', function(e){
         idx = e.item.index;
@@ -306,6 +294,21 @@ $(document).ready(function(){
     });
     owl.on('translate.owl.carousel', function(e){
         $('.center-mode-owl').find('.owl-dots').removeClass('disabled');
+    });
+    var iHeightOwl;
+    owl.on('resized.owl.carousel', function(e){
+        iHeightOwl = $('.center-mode-owl').height();
+        $('.wrap-owl-5').css({'height': iHeightOwl + 'px'});
+    });
+    owl.on('initialized.owl.carousel', function(e){
+        iHeightOwl = $('.center-mode-owl').height();
+    });
+    
+    owl.children().each( function( index ) {
+      $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
+    });
+    $(document).on('click', '.owl-item>div', function() {
+        owl.trigger('to.owl.carousel', $(this).data( 'position' ) );
     });
     owl.owlCarousel({
         center: true,
@@ -342,6 +345,19 @@ $(document).ready(function(){
         $(this).parent().find('.content-des').show();
         $(this).parent().find('.content-detail').hide();
     })
+
+    var bOpenModal = false;
+    $('[data-toggle=modal]').on('click', function (e) {
+        e.preventDefault();
+        if(!bOpenModal){
+            bOpenModal = true;
+            var target = $(this).attr('data-id');
+            setTimeout(function() {
+                bOpenModal = false;
+                $(target).modal('show');
+            }, 350); // milliseconds
+        }
+    });
 
     $('#modalDetailProd_1').on('show.bs.modal', function () {
         $('.back-layer').hide();
