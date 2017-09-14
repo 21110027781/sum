@@ -321,9 +321,6 @@ $(document).ready(function(){
           $(this).removeClass('disabled');
         });
     });
-    owl.on('translate.owl.carousel', function(e){
-        $('.center-mode-owl').find('.owl-dots').removeClass('disabled');
-    });
     var iHeightOwl;
     owl.on('resized.owl.carousel', function(e){
         iHeightOwl = $('.center-mode-owl').height();
