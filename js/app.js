@@ -324,7 +324,6 @@ $(document).ready(function(){
     var iHeightOwl;
     owl.on('resized.owl.carousel', function(e){
         iHeightOwl = $('.center-mode-owl').height();
-        console.log(iHeightOwl)
         $('.wrap-owl-5').css({'height': iHeightOwl + 'px'});
     });
     owl.on('initialized.owl.carousel', function(e){
