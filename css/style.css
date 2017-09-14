@@ -377,7 +377,7 @@ body{
 	width: 100%;
 	max-width: 375px;
 	position: absolute;
-	bottom: 0px;
+	bottom: 41px;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
