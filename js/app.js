@@ -414,4 +414,39 @@ $(document).ready(function(){
         $('#modalDetailProd_5').find('.content-des').show();
         $('#modalDetailProd_5').find('.content-detail').hide();
     })
+
+
+
+    $( ".f-contact .ip-sum" ).on('change keyup paste',function() {
+        if($(this).val().trim() != ''){
+            $(this).parent().find('.has-err').addClass('md-hide');
+        }else{
+            $(this).parent().find('.has-err').removeClass('md-hide');
+        }
+        
+    });
+    var sName, sEmail, sPhone;
+    $('.btn-submit').on('click', function(){
+        sName = $('#customerName').val().trim();
+        sEmail = $('#customerEmail').val().trim();
+        sPhone = $('#customerPhone').val().trim();
+        if(sName == '' || sEmail == '' || sPhone == ''){
+            if(sName == ''){
+                $('#customerName').parent().find('.has-err').removeClass('md-hide');
+            }else{
+                $('#customerName').parent().find('.has-err').addClass('md-hide');
+            }
+            if(sEmail == ''){
+                $('#customerEmail').parent().find('.has-err').removeClass('md-hide');
+            }else{
+                $('#customerEmail').parent().find('.has-err').addClass('md-hide');
+            }
+            if(sPhone == ''){
+                $('#customerPhone').parent().find('.has-err').removeClass('md-hide');
+            }else{
+                $('#customerPhone').parent().find('.has-err').addClass('md-hide');
+            }
+            return false;
+        }
+    })
 });
