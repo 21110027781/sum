@@ -31,7 +31,8 @@ $(document).ready(function(){
         loop: false,
         controlBar: {
             fullscreenToggle: false
-        }
+        },
+        preload: 'auto'
     };
     
     var autoPlayVideo_2 = videojs('video-section-2-auto', options, function () {});
