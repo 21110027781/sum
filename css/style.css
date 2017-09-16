@@ -263,6 +263,7 @@ body{
 	display: block;
 	padding-left: 40px;
 	font-size: 16px;
+	text-align: justify;
 }
 .section .play-more{
 	position: absolute;
@@ -665,7 +666,7 @@ video::-webkit-media-controls {
 }
 .br-section-3-both{
     position: absolute;
-    width: 229px;
+    width: 300px;
     bottom: 45px;
     left: 18%;
     z-index: 2;
