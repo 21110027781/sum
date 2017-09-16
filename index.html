@@ -6,6 +6,7 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&amp;subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="js/plugins/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/reset_set_me.css" />
@@ -13,9 +14,6 @@
     <link rel="stylesheet" href="js/plugins/videojs/video-js.min.css">
     <link rel="stylesheet" href="js/plugins/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="js/plugins/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">
-
-    <link rel="stylesheet" type="text/css" href="js/plugins/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="js/plugins/slick/slick-theme.css"/>
 
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript">
@@ -33,6 +31,10 @@
             <a href="#" class="logo">
                 <img src="images/logo.png" />
             </a>
+            <span class="navbar-mobile">
+                <span></span>
+            </span>
+            <span class="gif-mobile"><a href="#register"><img class="img-responsive" src="images/ic_gif_mobile.png"></a></span>
             <ul id="menu-sum" class="nav-menu style-menu-header">
                 <li data-menuanchor="story"><a href="#story">Câu chuyện của su:m37o</a></li>
                 <li data-menuanchor="secret"><a href="#secret">Secret Essence / Phép màu hồi sinh làn da</a></li>
@@ -49,7 +51,7 @@
                         <img class="img-sct-1 img-responsive" src="images/section_1.png">
                         <div class="under-img-sct">
                             <img class="img-text-1 img-responsive" src="images/section_1_1.png">
-                            <span class="text-s-1">Cô động tinh túy từ hơn 80 loài thực vật, tinh chất Secret Essence mang đến bí quyết cho lan da luôn căng mượt đầy sức sống</span>
+                            <span class="text-s-1">Cô đọng tinh túy từ hơn 80 loài thực vật, tinh chất Secret Essence mang đến bí quyết cho lan da luôn căng mượt đầy sức sống</span>
                             <a class="btn-style-link style-strong" href="#register">TRẢI NGHIỆM NGAY</a>
                         </div>
                     </div>
@@ -60,9 +62,14 @@
                     </ul>
                 </div>
             </div>
+            <div class="br-1-mobile"></div>
         </div>
         <div id="section-2" class="section fp-auto-height-responsive">
-            <div class="br-fullpage br-section-2"></div>
+            <div class="br-fullpage br-section-2">
+                <span class="br-section-3-both">
+                    <img class="img-responsive" src="images/background_2_bot.png">
+                </span>
+            </div>
             <div class="s-container">
                 <div class="col-right-section-2">
                     <img class="img-responsive" src="images/section_2.png" />
@@ -72,10 +79,14 @@
             <a id="play-section-2" class="play-more" href="javascript: void(0)"></a>
             <video id="video-section-2-auto" class="ele-video under-parent-index video-js in-hide">
                 <source src="video/auto_2.mp4" type="video/mp4"></source>
+                <source src="video/auto_2.webm" type="video/webm"></source>
+                <source src="video/auto_2.ogv" type="video/ogv"></source>
                 <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that</p>
             </video>
             <video id="video-section-2-click" class="ele-video under-parent-index video-js in-hide">
                 <source src="video/video_2.mp4" type="video/mp4">
+                <source src="video/video_2.webm" type="video/webm"></source>
+                <source src="video/video_2.ogv" type="video/ogv"></source>
             </video>
             <a id="close-video-2" class="close-video in-hide" href="javascript: void(0)"><img class="img-responsive" src="images/ic_close_white.png"></a>
         </div>
@@ -93,9 +104,13 @@
             <a id="play-section-3" class="play-more" href="javascript: void(0)"></a>
             <video id="video-section-3-auto" class="ele-video under-parent-index video-js in-hide">
                 <source src="video/auto_3.mp4" type="video/mp4">
+                <source src="video/auto_3.webm" type="video/webm"></source>
+                <source src="video/auto_3.ogv" type="video/ogv"></source>
             </video>
             <video id="video-section-3-click" class="ele-video under-parent-index video-js in-hide">
                 <source src="video/video_3.mp4" type="video/mp4">
+                <source src="video/video_3.webm" type="video/webm"></source>
+                <source src="video/video_3.ogv" type="video/ogv"></source>
             </video>
             <a id="close-video-3" class="close-video in-hide" href="javascript: void(0)"><img class="img-responsive" src="images/ic_close_white.png"></a>
         </div>
@@ -103,51 +118,58 @@
             <div class="s-container">
                 <div class="title-4">
                     <img class="img-sct-4 img-responsive" src="images/section_4_1.png" alt="">
+                    <img class="img-sct-4-mobile img-sct-4 md-hide img-responsive" src="images/section_4_1_mobile.png" alt="">
                 </div>
                 <div class="wrap-slide-4">
-                    <div id="slide-section-4" class="">
-                        <div class="item">
-                            <div class="box-slide-4">
-                                <div class="pri-img">
-                                    <img class="img-responsive" src="images/slide_girl_2.jpg" alt="" />
+                    <div id="slide-section-4">
+                        <div class="owl-container-4 owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="box-slide-4">
+                                    <div class="pri-img">
+                                        <img class="img-responsive" src="images/slide_girl_2.jpg" alt="" />
+                                    </div>
+                                    <div class="context-txt">
+                                        <span>An Japan</span>
+                                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor  adipisci velit...</p>
+                                    </div>
                                 </div>
-                                <div class="context-txt">
-                                    <span>An Japan</span>
-                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor  adipisci velit...</p>
+                            </div>
+                            <div class="item">
+                                <div class="box-slide-4">
+                                    <div class="pri-img">
+                                        <img class="img-responsive" src="images/slide_girl_1.jpg" alt="" />
+                                    </div>
+                                    <div class="context-txt">
+                                        <span>Primmy Truong</span>
+                                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor  adipisci velit...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="box-slide-4">
+                                    <div class="pri-img">
+                                        <img class="img-responsive" src="images/slide_girl_3.jpg" alt="" />
+                                    </div>
+                                    <div class="context-txt">
+                                        <span>Quynh Anh Shyn</span>
+                                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor  adipisci velit...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="box-slide-4">
+                                    <div class="pri-img">
+                                        <img class="img-responsive" src="images/slide_girl_2.jpg" alt="" />
+                                    </div>
+                                    <div class="context-txt">
+                                        <span>An Japan</span>
+                                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="box-slide-4">
-                                <div class="pri-img">
-                                    <img class="img-responsive" src="images/slide_girl_1.jpg" alt="" />
-                                </div>
-                                <div class="context-txt">
-                                    <span>Primmy Truong</span>
-                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor  adipisci velit...</p>
-                                </div>
-                            </div>
-                        </div><div class="item">
-                            <div class="box-slide-4">
-                                <div class="pri-img">
-                                    <img class="img-responsive" src="images/slide_girl_3.jpg" alt="" />
-                                </div>
-                                <div class="context-txt">
-                                    <span>Quynh Anh Shyn</span>
-                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor  adipisci velit...</p>
-                                </div>
-                            </div>
-                        </div><div class="item">
-                            <div class="box-slide-4">
-                                <div class="pri-img">
-                                    <img class="img-responsive" src="images/slide_girl_2.jpg" alt="" />
-                                </div>
-                                <div class="context-txt">
-                                    <span>An Japan</span>
-                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
-                                </div>
-                            </div>
-                        </div>
+                        <span class="owl-slide-control slick-prev"><img class="img-responsive" src="images/prev_slide.png" alt=""></span>
+                        <span class="owl-slide-control slick-next"><img class="img-responsive" src="images/next_slide.png" alt=""></span>
                     </div>
                 </div>
             </div>
@@ -156,76 +178,47 @@
             <div class="s-container">
                 <div class="title-5">
                     <img class="img-sct-5 img-responsive" src="images/section_5.png" alt="">
+                    <img class="img-sct-5-mobile md-hide img-responsive" src="images/section_5_mobile.png" alt="">
+                    
                 </div>
                 <div class="wrap-owl-5">
                     <div class="center-mode-owl owl-carousel owl-theme">
-                        <div class="item" data-toggle="modal" data-target="#modalDetailProd_1">
+                        <div class="item" data-toggle="modal" data-id="#modalDetailProd_1">
                             <div class="pri-img-item">
                                 <img src="images/slide_5_1.png">
                             </div>
                             <span class="name">Secret Essence</span>
                         </div>
-                        <div class="item" data-toggle="modal" data-target="#modalDetailProd_2">
+                        <div class="item" data-toggle="modal" data-id="#modalDetailProd_2">
                             <div class="pri-img-item">
                                 <img src="images/slide_5_2.png">
                             </div>
                             <span class="name">Skin Saver Cleansing</span>
                         </div>
-                        <div class="item" data-toggle="modal" data-target="#modalDetailProd_3">
+                        <div class="item" data-toggle="modal" data-id="#modalDetailProd_3">
                             <div class="pri-img-item">
                                 <img src="images/slide_5_3.png">
                             </div>
                             <span class="name">Dear Flora</span>
                         </div>
-                        <div class="item" data-toggle="modal" data-target="#modalDetailProd_4">
+                        <div class="item" data-toggle="modal" data-id="#modalDetailProd_4">
                             <div class="pri-img-item">
-                                <img src="images/slide_5_4_old.png">
+                                <img src="images/slide_5_4.png">
                             </div>
                             <span class="name">Losec Therapy</span>
                         </div>
-                        <div class="item" data-toggle="modal" data-target="#modalDetailProd_5">
+                        <div class="item" data-toggle="modal" data-id="#modalDetailProd_5">
                             <div class="pri-img-item">
                                 <img src="images/slide_5_5.png">
                             </div>
                             <span class="name">White Award</span>
                         </div>
-                        <div class="item" data-toggle="modal" data-target="#modalDetailProd_3">
-                            <div class="pri-img-item">
-                                <img src="images/slide_5_3.png">
-                            </div>
-                            <span class="name">Dear Flora</span>
-                        </div>
+                    </div>
+                    <div class="effect-water-owl">
+                        <img class="img-responsive" src="images/img-rgt-2-1.png" alt="" />
                     </div>
                     <a class="owl-5-prev" href="javascript: void(0)"><img class="img-responsive" src="images/prev_slide.png" alt=""></a>
                     <a class="owl-5-next" href="javascript: void(0)"><img class="img-responsive" src="images/next_slide.png" alt=""></a>
-                </div>
-                <div class="wrap-slide-5 hide">
-                    <div id="slick-discover">
-                        <div>
-                            <div data-toggle="modal" data-target="#modalDetailProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_1.png" alt=""></div>
-                            <span class="name-product">Lorem Inpusin</span>
-                        </div>
-                        <div>
-                            <div data-toggle="modal" data-target="#modalDetailProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_2.png" alt=""></div>
-                            <span class="name-product">Lorem Inpusin</span>
-                        </div>
-                        <div>
-                            <div data-toggle="modal" data-target="#modalDetailProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_3.png" alt=""></div>
-                            <span class="name-product">Lorem Inpusin</span>
-                        </div>
-                        <div>
-                            <div data-toggle="modal" data-target="#modalDetailProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_4.png" alt=""></div>
-                            <span class="name-product">Lorem Inpusin</span>
-                        </div>
-                        <div>
-                            <div data-toggle="modal" data-target="#modalDetailProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_1.png" alt=""></div>
-                            <span class="name-product">Lorem Inpusin</span>
-                        </div>
-                        <div>
-                            <div data-toggle="modal" data-target="#modalDetailProd" class="discover-item"><img class="img-cos img-responsive" src="images/stc_5_5.png" alt=""></div>
-                            <span class="name-product">Lorem Inpusin</span>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- <img class="img-responsive" src="images/pri_background_5.jpg" /> -->
@@ -235,7 +228,7 @@
                 <div class="content-on-footer">
                     <div class="title-6">
                         <img class="img-responsive none-action" src="images/section_6.png" alt="section_6.png" />
-                        <span>Làn da có thể thay đổi như thế nào chỉ trong 7 ngày? Hãy thử cảm nhận sự làn da trong mướt, căng mượt tươi trẻ sau 1 tuần cùng su:m37 Secret Essence.</span>
+                        <span>Làn da có thể thay đổi như thế nào chỉ trong 7 ngày? Hãy thử cảm nhận làn da trong mướt, căng mượt tươi trẻ sau 1 tuần cùng su:m37 Secret Essence.</span>
                     </div>
                     <div class="f-rose-1 none-action">
                         <img class="img-responsive" src="images/rose_1.png" alt="" />
@@ -254,7 +247,8 @@
                                                 <label>Họ tên:</label>
                                             </div>
                                             <div class="group-inline">
-                                                <input class="ip-sum" type="text" name="">
+                                                <input id="customerName" class="ip-sum" type="text" name="">
+                                                <span class="has-err md-hide">Vui lòng nhập thông tin</span>
                                             </div>
                                         </div>
                                         <div class="group-ip m-b-20">
@@ -262,7 +256,8 @@
                                                 <label>Email:</label>
                                             </div>
                                             <div class="group-inline">
-                                                <input class="ip-sum" type="text" name="">
+                                                <input id="customerEmail" class="ip-sum" type="text" name="">
+                                                <span class="has-err md-hide">Vui lòng nhập thông tin</span>
                                             </div>
                                         </div>
                                         <div class="group-ip m-b-20">
@@ -270,12 +265,13 @@
                                                 <label>Điện thoại:</label>
                                             </div>
                                             <div class="group-inline">
-                                                <input class="ip-sum" type="text" name="">
+                                                <input id="customerPhone" class="ip-sum" type="text" name="">
+                                                <span class="has-err md-hide">Vui lòng nhập thông tin</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="right-localtion">
-                                        <span class="des-localion">Bạn đăng ký mẫu thử tại (chọn 1 trong 2)</span>
+                                        <div class="des-localion">Bạn đăng ký mẫu thử tại <span>(chọn 1 trong 2):</span></div>
                                         <div class="group-radio-location">
                                             <label for="hcm" class="m-b-5">
                                                 <input id="hcm" type="radio" name="location">
@@ -304,6 +300,7 @@
             </div>
         </div>
     </div>
+    <a href="#magic" id="backToTop"><img class="img-responsive" src="images/back-to-top.png" alt="" /></a>
     <footer class="clearfix">
         <div class="item-footer">
             <span>Hotline: 1800599910</span>
@@ -588,7 +585,6 @@
     <script type="text/javascript" src="js/plugins/fullPage/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/plugins/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 
-    <script type="text/javascript" src="js/plugins/slick/slick.min.js"></script>
     <!-- script page-->
     <script src="js/app.js"></script>
 </body>
