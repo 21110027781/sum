@@ -110,7 +110,7 @@ body{
 .header-menu{
 	max-width: 1140px;
 	margin: 0 auto;
-	padding: 20px 15px 0px 15px;
+	padding: 15px 15px 0px 15px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -188,7 +188,7 @@ body{
 	border: 1px solid #000;
 	padding: 10px 12px;
 	color: #000;
-	-webkit-transition: all 0.3s; /* Safari */
+	-webkit-transition: all 0.3s;
     transition: all 0.3s;
     max-width: 245px;
     width: 100%;
@@ -209,7 +209,7 @@ body{
     background-repeat: no-repeat;
 }
 #section-1.section{
-	background-position: bottom center;
+	background-position: top -25px center;
 }
 #section-1{
     background-image: url('../images/background_1.jpg');
