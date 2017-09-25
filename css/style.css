@@ -209,7 +209,7 @@ body{
     background-repeat: no-repeat;
 }
 #section-1.section{
-	background-position: top -25px center;
+	background-position: bottom center;
 }
 #section-1{
     background-image: url('../images/background_1.jpg');
