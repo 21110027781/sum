@@ -444,7 +444,7 @@ body{
 	padding: 25px 30px 50px 30px;
 	position: relative;
 	max-width: 700px;
-	margin: 35px auto 0px auto;
+	margin: 25px auto 0px auto;
     box-shadow: 15px 0px 15px -6px #ccc;
     z-index: 5;
 }
@@ -455,12 +455,16 @@ body{
     z-index: 10;
 }
 .title-6>span{
-	margin-top: 20px;
-	display: block;
-	text-align: center;
-	position: relative;
-	z-index: 10;
-	font-size: 16px;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding: 0px 59px;
+    font-size: 13px;
+}
+.des-form-section-6{
+	font-size: 12px;
 }
 .f-contact .title-form{
 	font-size: 20px;
@@ -472,7 +476,7 @@ body{
 }
 .f-contact .left-infor-user{
 	float: left;
-    width: 65%;
+    width: 55%;
     padding-right: 30px;
     border-right: 1px solid #ccc;
     position: relative;
@@ -480,7 +484,7 @@ body{
 }
 .f-contact .right-localtion{
 	float: left;
-	width: 35%;
+	width: 45%;
 	padding-left: 30px;
 	position: relative;
 	z-index: 15;
@@ -554,11 +558,11 @@ body{
     outline: none;
     box-shadow: none;
     cursor: pointer;
-    max-width: 210px;
+    max-width: 255px;
     position: absolute;
     bottom: -22px;
     left: 50%;
-    margin-left: -105px;
+    margin-left: -127px;
     z-index: 15;
 }
 .none-action{
@@ -568,9 +572,9 @@ body{
 #form-contact-box .img-form-sum{
     position: absolute;
     z-index: 10;
-    width: 215px;
-    right: -145px;
-    bottom: -70px;
+    width: 300px;
+    right: -200px;
+    bottom: -100px;
 }
 #section-6 .f-rose-1{
 	position: absolute;
@@ -1143,10 +1147,14 @@ video::-webkit-media-controls {
     width: 275px;
     margin: 0 auto;
 }
+.contain-rgt-2 .step-2-location{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
 .contain-rgt-2 .des{
 	font-family: 'VNFNarzissRegular';
 	font-weight: 600;
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 16px;
     margin-bottom: 15px;
 }
@@ -1173,12 +1181,12 @@ video::-webkit-media-controls {
 }
 .list-step-rgt-2 li span{
 	display: block;
-	margin-top: 15px;
+	margin: 15px -12px 0px -12px;
 }
 .rgt2-location{
 	border-bottom: 1px solid #000;
-	padding-bottom: 30px;
-	margin-bottom: 30px;
+	padding-bottom: 25px;
+    margin-bottom: 15px;
 }
 .water-effect img{
 	max-width: 450px;
@@ -1371,7 +1379,7 @@ video::-webkit-media-controls {
 	.title-6>span{
 		/*font-size: 14px;
 		margin-top: 10px;*/
-		padding: 0px 20px;
+		padding: 0px;
 	}
 	.title-6>img{
 		width: 280px;
@@ -1382,7 +1390,7 @@ video::-webkit-media-controls {
 	#form-contact-box{
 		width: 100%;
 		margin-top: 15px;
-		padding: 25px 15px 50px 15px;
+		padding: 25px 15px 45px 15px;
 	    box-shadow: 1px 1px 4px 0px #ccc;
 	}
 	.f-contact .title-form{
@@ -1545,6 +1553,7 @@ video::-webkit-media-controls {
 		width: 100%;
 	}
 	.f-contact .right-localtion{
+		margin-top: 20px;
 		float: none;
 		padding-left: 0px;
 		width: 100%;
